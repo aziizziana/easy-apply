@@ -1,6 +1,11 @@
 EasyApply::Application.routes.draw do
+  
   root to: "home#index"
   devise_for :users
+
+   match "home/application_form" => "home#application_form"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

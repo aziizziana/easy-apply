@@ -1,0 +1,41 @@
+<%= link_to "Home", root_path %>
+
+<h1>Application Form</h1>
+
+<%= form_for :user , :html => { :multipart => true} do |f| %>
+ <p>
+ 	<%= f.label :Course_1 %> 
+    <%= f.text_field :course_one %>
+ </p>
+
+ <p>
+ 	<%= f.label :Course_2%> 
+    <%= f.text_field :course_two %>
+ </p>
+
+ <p>
+ 	<%= f.label :Course_3 %> 
+    <%= f.text_field :course_three %>
+ </p>
+
+ <p>
+ 	PLE Certificate:
+    <%= f.file_field :ple_certificate %>
+ </p>
+
+ <p>
+ 	UCE Certificate:
+    <%= f.file_field :uce_certificate %>
+ </p>
+
+ <p>
+ 	UACE Certificate: 
+    <%= f.file_field :uace_certificate %>
+ </p>
+
+ <p>
+  <%= f.submit "Save My Application"  %>
+ </p> 
+
+<% end %>
+
