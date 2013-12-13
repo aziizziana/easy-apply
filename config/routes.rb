@@ -3,9 +3,7 @@ EasyApply::Application.routes.draw do
   root to: "home#index"
   devise_for :users
 
-  match "/home/new_application"  => "home#new_application"
-  match "/home"                  => "home#create_application"
-  match "/home/show_application" => "home#show_application"  
+  resources :user_apps  
 
 
   # The priority is based upon order of creation:

@@ -11,24 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131127093122) do
+ActiveRecord::Schema.define(:version => 20131205220014) do
 
-  create_table "users", :force => true do |t|
-    t.string   "email",                         :default => "", :null => false
-    t.string   "encrypted_password",            :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                 :default => 0,  :null => false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                    :null => false
-    t.datetime "updated_at",                                    :null => false
+  create_table "user_apps", :force => true do |t|
+    t.integer  "user_id"
     t.string   "course_one"
     t.string   "course_two"
     t.string   "course_three"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "ple_certificate_file_name"
     t.string   "ple_certificate_content_type"
     t.integer  "ple_certificate_file_size"
@@ -41,6 +32,21 @@ ActiveRecord::Schema.define(:version => 20131127093122) do
     t.string   "uace_certificate_content_type"
     t.integer  "uace_certificate_file_size"
     t.datetime "uace_certificate_updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0,  :null => false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
