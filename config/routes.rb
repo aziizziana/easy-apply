@@ -1,6 +1,10 @@
 EasyApply::Application.routes.draw do
+  
   root to: "home#index"
   devise_for :users
+
+  resources :user_apps  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

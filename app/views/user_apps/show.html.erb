@@ -1,0 +1,22 @@
+<%= link_to "Home", root_path %>
+
+<h2><%= current_user.email %>'s submitted application </h2>
+
+<p><b>Course 1:</b> <i><%= @user_app.course_one %></i></p>
+<p><b>Course 2:</b> <i><%= @user_app.course_two %></i></p>
+<p><b>Course 3:</b> <i><%= @user_app.course_three %></i></p>
+
+<p>
+<b>PLE Certificate:</b><br>
+<%= image_tag @user_app.ple_certificate.url(:medium) %>
+</p>
+
+<p>
+<b>UCE Certificate:</b><br>
+<%= image_tag @user_app.uce_certificate.url(:medium) %>
+</p>
+
+<p>
+<b>UACE Certificate:</b><br>
+<%= image_tag @user_app.uace_certificate.url(:medium) %>
+</p>
