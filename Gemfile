@@ -41,4 +41,3 @@ gem 'bootstrap-sass','2.3.2.0'
 
 # To use debugger
 # gem 'debugger'
->>>>>>> 5e2306ea7f4a78c01a9f39ce867c12f22ba88e08
