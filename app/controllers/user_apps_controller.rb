@@ -1,8 +1,7 @@
 class UserAppsController < ApplicationController
 
   def new
-	  @user = current_user
-    @user_app = @user.build_user_app(params[:user_app])
+	  @user_app = UserApp.new
   end
 
 	def create
@@ -17,6 +16,7 @@ class UserAppsController < ApplicationController
 	end
 
 	def show
-		 @user_app = UserApp.find(params[:id])
+    @user = current_user
+		@user_app = @user.user_app
 	end
 end

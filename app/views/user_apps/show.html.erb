@@ -2,6 +2,7 @@
 
 <h2><%= current_user.email %>'s submitted application </h2>
 
+<%if @user_app != nil %>
 <p><b>Course 1:</b> <i><%= @user_app.course_one %></i></p>
 <p><b>Course 2:</b> <i><%= @user_app.course_two %></i></p>
 <p><b>Course 3:</b> <i><%= @user_app.course_three %></i></p>
@@ -20,3 +21,6 @@
 <b>UACE Certificate:</b><br>
 <%= image_tag @user_app.uace_certificate.url(:medium) %>
 </p>
+<%else%>
+There are no applications yet
+<%end%>
