@@ -11,8 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+ActiveRecord::Schema.define(:version => 20131205220014) do
 
-ActiveRecord::Schema.define(:version => 20131025165545) do
+  create_table "user_apps", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "course_one"
+    t.string   "course_two"
+    t.string   "course_three"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "ple_certificate_file_name"
+    t.string   "ple_certificate_content_type"
+    t.integer  "ple_certificate_file_size"
+    t.datetime "ple_certificate_updated_at"
+    t.string   "uce_certificate_file_name"
+    t.string   "uce_certificate_content_type"
+    t.integer  "uce_certificate_file_size"
+    t.datetime "uce_certificate_updated_at"
+    t.string   "uace_certificate_file_name"
+    t.string   "uace_certificate_content_type"
+    t.integer  "uace_certificate_file_size"
+    t.datetime "uace_certificate_updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -33,3 +53,4 @@ ActiveRecord::Schema.define(:version => 20131025165545) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
+
